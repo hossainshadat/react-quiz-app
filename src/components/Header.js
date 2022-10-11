@@ -25,7 +25,7 @@ const Header = () => {
           </span>
         </NavLink>
         <ul className="flex items-center hidden space-x-8 lg:flex">
-          <li>
+          {/* <li>
             <NavLink
               to="/home"
               aria-label="Home"
@@ -38,7 +38,7 @@ const Header = () => {
             >
               Home
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/topics"

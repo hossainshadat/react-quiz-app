@@ -6,7 +6,7 @@ function Home() {
   const data = useLoaderData();
 
   return (
-    <div className="bg-zinc-300 ">
+    <div className="bg-zinc-100 ">
       <Hero data={data} />
     </div>
   );

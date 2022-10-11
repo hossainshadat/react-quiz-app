@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HomeCard({ data }) {
   const { id, name, logo, total } = data;
@@ -11,12 +12,12 @@ function HomeCard({ data }) {
           Total Quiz : {name} {total}
         </p>
       </div>
-      <button
-        type="submit"
-        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-blue-400  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+      <Link
+        to={`../quiz/${id}`}
+        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-blue-400  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none cursor-pointer"
       >
         Start Practice
-      </button>
+      </Link>
     </div>
   );
 }
