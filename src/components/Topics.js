@@ -1,10 +1,11 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Questions from "./Questions";
 
 function Topics() {
   const data = useLoaderData();
-  const { total, id, name, questions } = data.data;
-  // console.log(data.data);
+  const { name, questions, correctAnswer } = data.data;
+  console.log(data.data);
 
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -13,7 +14,11 @@ function Topics() {
           {name}
         </h2>
       </div>
-      <div className="bg-purple-200 p-5 border rounded shadow-sm">
+      {questions.map((question) => (
+        <Questions key={question.id} question={question} />
+      ))}
+
+      {/* <div className="bg-purple-200 p-5 border rounded shadow-sm">
         <h4 className="max-w-lg mb-6 font-sans text-2xl font-semibold leading-none tracking-tight text-gray-900 sm:text-2xl md:mx-auto">
           quick, brown fox jumps over a lazy dog
         </h4>
@@ -96,7 +101,7 @@ function Topics() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
