@@ -3,7 +3,6 @@ import QuizCard from "./QuizCard";
 
 function Questions({ question }) {
   const [show, setShow] = useState(false);
-  console.log(show);
   return (
     <div className="bg-purple-200 p-5 border rounded my-5 shadow-sm">
       <div className="flex">
@@ -24,18 +23,7 @@ function Questions({ question }) {
           <QuizCard option={option} answer={question} />
         ))}
       </div>
-      {/* <h4 className="text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer hidden">
-        Answer : {question.correctAnswer}
-      </h4> */}
-      {/* <h4
-        className={`${
-          show
-            ? "text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer hidden"
-            : "text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer"
-        }`}
-      >
-        Answer : {question.correctAnswer}
-      </h4> */}
+     
       {show && (
         <h4 className="text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer">
           Answer : {question.correctAnswer}

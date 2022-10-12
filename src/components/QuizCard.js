@@ -13,8 +13,7 @@ function QuizCard(props) {
       toast.success("Answer Correct!", { autoClose: 500 });
     }
   };
-
-  //   console.log(props);
+  
   return (
     <div className=" bg-neutral-100 p-2 border rounded shadow-sm">
       <div className="flex items-center ">
