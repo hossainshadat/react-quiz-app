@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 
 function QuizCard(props) {
-  const [radio, setRadio] = useState(null);
-  console.log(typeof radio);
+  const correctAnswer = props.answer.correctAnswer;
+
+  const handleClick = (e) => {
+    const value = e.target.value;
+
+    if (value !== correctAnswer) {
+      toast.warning("Wrong Answer!", { autoClose: 500 });
+    } else {
+      toast.success("Answer Correct!", { autoClose: 500 });
+    }
+  };
 
   //   console.log(props);
   return (
@@ -13,9 +22,8 @@ function QuizCard(props) {
           id={`default-radio-${props.option.length}`}
           type="radio"
           value={`${props.option}`}
-          checked={radio === "radioA"}
-          onChange={(e) => {
-            setRadio(e.target.value);
+          onClick={(e) => {
+            handleClick(e);
           }}
           name="default-radio"
           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
