@@ -1,18 +1,14 @@
-# Smart Home Starter Repository
+# Usage At a Glance
 
-An E-commerce platform for buying high quality Smart Home Appliances at extremely affordable Price.
+Flat Icon, React router dom, Tailwind css, kitwind , Mamba UI
 
 ## Live Link
 
-Hosted in Netlify -> [Smart Home](https://shome-shop.netlify.app/)
-
-## Context API
-
-Documentation Link -> [Link](https://reactjs.org/docs/context.html#api)
+Hosted in Netlify -> [Quiz App](https://rad-custard-fb9391.netlify.app/)
 
 ## React Router Dom v6.4
 
-Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
+Github Link -> [Link](https://github.com/programming-hero-web-course2/b6-quiz-crackerz-hossainshadat)
 
 ## Resources & Credits
 
@@ -23,4 +19,3 @@ Tailwind Components ->
 ## Other Resources
 
 Icon -> [FlatIcon](https://www.flaticon.com/)
-Product Photos -> [Freepic](https://www.freepik.com/)

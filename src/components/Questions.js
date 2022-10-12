@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import QuizCard from "./QuizCard";
 
 function Questions({ question }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   console.log(show);
   return (
     <div className="bg-purple-200 p-5 border rounded my-5 shadow-sm">
@@ -12,7 +12,7 @@ function Questions({ question }) {
         </h4>
         <div>
           <img
-            onClick={() => setShow(false)}
+            onClick={() => setShow((prev) => !prev)}
             className="h-6 w-6 cursor-pointer"
             src="../view.png"
             alt="View"
@@ -27,7 +27,7 @@ function Questions({ question }) {
       {/* <h4 className="text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer hidden">
         Answer : {question.correctAnswer}
       </h4> */}
-      <h4
+      {/* <h4
         className={`${
           show
             ? "text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer hidden"
@@ -35,7 +35,12 @@ function Questions({ question }) {
         }`}
       >
         Answer : {question.correctAnswer}
-      </h4>
+      </h4> */}
+      {show && (
+        <h4 className="text-violet-500 max-w-lg mt-3 font-sans text-2xl font-semibold leading-none tracking-tight sm:text-2xl cursor-pointer">
+          Answer : {question.correctAnswer}
+        </h4>
+      )}
     </div>
   );
 }
